@@ -1,0 +1,20 @@
+{
+  "name": "@repo/assets",
+  "version": "0.0.0",
+  "main": "index.js",
+  "exports": {
+    "./*": "./*",
+    "./icons/*": "./icons/*",
+    "./images/*": "./images/*",
+    "./fonts/*": "./fonts/*",
+    "./fonts": "./fonts/fonts.css",
+    "./logos/*": "./logos/*"
+  },
+  "files": [
+    "icons",
+    "images",
+    "fonts",
+    "logos",
+    "index.js"
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "name": "plugins-turborepo",
+  "author": "jary",
+  "scripts": {
+    "dev": "turbo run dev",
+    "dev:ui": "pnpm --filter @repo/ui dev",
+    "dev:example-plugin": "pnpm --filter example-plugin dev",
+    "build": "turbo run build",
+    "build:ui": "pnpm --filter @repo/ui build",
+    "build:example-plugin": "pnpm --filter example-plugin build",
+    "lint": "turbo run lint",
+    "lint:fix": "turbo run lint:fix",
+    "lint:ui": "pnpm --filter @repo/ui lint",
+    "lint:example-plugin": "pnpm --filter example-plugin lint",
+    "format": "turbo run format",
+    "format:check": "turbo run format:check",
+    "check-types": "turbo run check-types",
+    "check-types:example-plugin": "pnpm --filter example-plugin check-types",
+    "start:example-plugin": "pnpm --filter example-plugin preview"
+  },
+  "devDependencies": {
+    "prettier": "^3.6.2",
+    "turbo": "^2.5.5",
+    "typescript": "5.8.3"
+  },
+  "packageManager": "pnpm@10.14.0",
+  "engines": {
+    "node": ">=22.0.0"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "name": "@repo/tailwind-config",
+  "version": "0.0.0",
+  "main": "tailwind.config.js",
+  "exports": {
+    ".": "./tailwind.config.js",
+    "./globals.css": "./globals.css",
+    "./postcss": "./postcss.config.js"
+  },
+  "files": [
+    "tailwind.config.js",
+    "postcss.config.js",
+    "globals.css"
+  ],
+  "dependencies": {
+    "@repo/assets": "workspace:*",
+    "autoprefixer": "^10.4.16",
+    "postcss": "^8.4.32",
+    "tailwindcss": "^3.4.0"
+  }
+}

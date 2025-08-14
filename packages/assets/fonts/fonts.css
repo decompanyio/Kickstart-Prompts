@@ -1,0 +1,9 @@
+/* Pretendard Variable 폰트 - 로컬 파일 */
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 100 900;
+  font-display: swap;
+  src:
+    local("Pretendard Variable"),
+    url("./pretendard/PretendardVariable.woff2") format("woff2-variations");
+}
