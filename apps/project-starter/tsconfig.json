@@ -1,0 +1,15 @@
+{
+  "extends": "@repo/typescript-config/vite-app.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["app/*"],
+      "@components/*": ["app/components/*"],
+      "@assets/*": ["app/assets/*"],
+      "@utils/*": ["app/utils/*"],
+      "@types/*": ["app/types/*"]
+    }
+  },
+  "include": ["app/**/*", "index.html", "vite.config.ts"],
+  "exclude": ["node_modules", "dist"]
+}

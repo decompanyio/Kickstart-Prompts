@@ -3,6 +3,6 @@
   "compilerOptions": {
     "outDir": "dist"
   },
-  "include": ["src"],
+  "include": ["src", "../../apps/project-starter/src/app/components/prompt-card.tsx", "../../apps/project-starter/src/app/components/prompt-list.tsx"],
   "exclude": ["node_modules", "dist"]
 }
