@@ -16,7 +16,7 @@ type PromptListProps = {
 const PromptList = ({ prompts, className }: PromptListProps) => {
   return (
     <div
-      className={`grid gap-4 md:grid-cols-2 lg:grid-cols-3 ${className || ''}`}
+      className={`grid gap-6 md:grid-cols-2 xl:grid-cols-3 ${className || ''}`}
     >
       {prompts.map((prompt) => (
         <PromptCard

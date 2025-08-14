@@ -1,4 +1,4 @@
-import * as React from 'react'
+import React, { useState } from 'react'
 import { Copy, Check } from 'lucide-react'
 import {
   Card,
@@ -9,7 +9,7 @@ import {
   CardTitle,
 } from '@repo/ui/card'
 import { Button } from '@repo/ui/button'
-import { cn } from '../../../../packages/ui/src/lib/utils'
+import { cn } from '@repo/ui'
 
 type PromptCardProps = {
   title: string
@@ -19,9 +19,6 @@ type PromptCardProps = {
   className?: string
 }
 
-const CopyIcon = Copy as any
-const CheckIcon = Check as any
-
 const PromptCard = ({
   title,
   description,
@@ -29,7 +26,7 @@ const PromptCard = ({
   category,
   className,
 }: PromptCardProps) => {
-  const [isCopied, setIsCopied] = React.useState(false)
+  const [isCopied, setIsCopied] = useState<boolean>(false)
 
   const handleCopy = async () => {
     try {
@@ -42,46 +39,57 @@ const PromptCard = ({
   }
 
   return (
-    <Card className={cn('w-full transition-all hover:shadow-md', className)}>
-      <CardHeader>
+    <Card
+      className={cn(
+        'w-full transition-all duration-200 hover:shadow-lg hover:scale-[1.02] border-l-4 border-l-primary/20',
+        className
+      )}
+    >
+      <CardHeader className="pb-3">
         <div className="flex items-start justify-between">
-          <div className="space-y-1">
-            <CardTitle className="text-lg">{title}</CardTitle>
-            {description && <CardDescription>{description}</CardDescription>}
+          <div className="space-y-2 flex-1">
+            <CardTitle className="text-lg leading-tight">{title}</CardTitle>
             {category && (
-              <span className="inline-flex items-center rounded-full bg-primary/10 px-2.5 py-0.5 text-xs font-medium text-primary">
-                {category}
-              </span>
+              <div className="flex items-center gap-2">
+                <span className="inline-flex items-center rounded-full bg-gradient-to-r from-primary/10 to-primary/20 px-3 py-1 text-xs font-medium text-primary border border-primary/20">
+                  {category}
+                </span>
+              </div>
             )}
           </div>
         </div>
       </CardHeader>
-      <CardContent>
-        <div className="rounded-md bg-muted p-3">
-          <pre className="text-sm text-muted-foreground whitespace-pre-wrap">
-            {prompt}
-          </pre>
-        </div>
+      <CardContent className="pt-0">
+        {description && (
+          <CardDescription className="text-sm leading-relaxed">
+            {description}
+          </CardDescription>
+        )}
       </CardContent>
-      <CardFooter>
-        <Button
-          variant="outline"
-          size="sm"
-          onClick={handleCopy}
-          className="ml-auto"
-        >
-          {isCopied ? (
-            <>
-              <CheckIcon className="mr-2 h-4 w-4" />
-              복사됨
-            </>
-          ) : (
-            <>
-              <CopyIcon className="mr-2 h-4 w-4" />
-              복사
-            </>
-          )}
-        </Button>
+      <CardFooter className="pt-3">
+        <div className="flex w-full items-center">
+          <Button
+            variant={isCopied ? 'default' : 'outline'}
+            size="sm"
+            onClick={handleCopy}
+            className={cn(
+              'transition-all duration-200',
+              isCopied && 'bg-green-500 hover:bg-green-600 text-white'
+            )}
+          >
+            {isCopied ? (
+              <>
+                <Check className="mr-2 h-4 w-4" />
+                복사됨!
+              </>
+            ) : (
+              <>
+                <Copy className="mr-2 h-4 w-4" />
+                복사
+              </>
+            )}
+          </Button>
+        </div>
       </CardFooter>
     </Card>
   )

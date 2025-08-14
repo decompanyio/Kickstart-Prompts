@@ -4,19 +4,19 @@
   "scripts": {
     "dev": "turbo run dev",
     "dev:ui": "pnpm --filter @repo/ui dev",
-    "dev:example-plugin": "pnpm --filter example-plugin dev",
+    "dev:project-starter": "pnpm --filter project-starter dev",
     "build": "turbo run build",
     "build:ui": "pnpm --filter @repo/ui build",
-    "build:example-plugin": "pnpm --filter example-plugin build",
+    "build:project-starter": "pnpm --filter project-starter build",
     "lint": "turbo run lint",
     "lint:fix": "turbo run lint:fix",
     "lint:ui": "pnpm --filter @repo/ui lint",
-    "lint:example-plugin": "pnpm --filter example-plugin lint",
+    "lint:project-starter": "pnpm --filter project-starter lint",
     "format": "turbo run format",
     "format:check": "turbo run format:check",
     "check-types": "turbo run check-types",
-    "check-types:example-plugin": "pnpm --filter example-plugin check-types",
-    "start:example-plugin": "pnpm --filter example-plugin preview"
+    "check-types:project-starter": "pnpm --filter project-starter check-types",
+    "start:project-starter": "pnpm --filter project-starter preview"
   },
   "devDependencies": {
     "prettier": "^3.6.2",
