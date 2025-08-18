@@ -4,7 +4,7 @@
 KICKSTART-PROMPTS는 GitHub Copilot, ChatGPT 등 AI 코딩 어시스턴트를 활용해
 신규 프로젝트를 빠르고 일관되게 셋업할 수 있도록 돕는 프롬프트 모음집입니다.
 
-## 🚀 빠른 시작
+## 빠른 시작
 
 ### 요구사항
 
@@ -44,7 +44,7 @@ pnpm check-types         # 전체 타입 체크
 pnpm check-types:project-starter  # 특정 앱 타입 체크
 ```
 
-## 📦 패키지 구조
+## 패키지 구조
 
 이 레포지토리는 Turborepo를 사용한 모노레포로 구성되어 있습니다.
 
@@ -53,6 +53,10 @@ pnpm check-types:project-starter  # 특정 앱 타입 체크
 - **`apps/project-starter`** - React + Vite 기반 프로젝트 스타터 애플리케이션
 
 ### Packages
+
+- **`packages/api`** - 공통 api 셋팅
+  - Axios config
+  - Supabase config
 
 - **`packages/ui`** - 공통 UI 컴포넌트 라이브러리
   - Button, Card, Code 등 재사용 가능한 컴포넌트
@@ -74,7 +78,7 @@ pnpm check-types:project-starter  # 특정 앱 타입 체크
 - **`packages/assets`** - 공통 에셋 패키지
   - Pretendard 폰트 및 기타 공통 리소스
 
-## 🔄 의존성 업데이트
+## 의존성 업데이트
 
 ### 전체 워크스페이스 의존성 업데이트
 
@@ -127,7 +131,7 @@ pnpm build
 pnpm dev
 ```
 
-## 🛠️ 개발 가이드
+## 개발 가이드
 
 ### 새로운 패키지 추가
 
