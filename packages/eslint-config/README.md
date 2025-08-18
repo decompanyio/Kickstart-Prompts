@@ -6,12 +6,6 @@
 
 이 패키지는 다양한 프로젝트 타입에 맞는 ESLint 설정을 제공합니다. React, Next.js, TypeScript 등 다양한 환경에 대응하는 설정들이 포함되어 있습니다.
 
-## 설치
-
-```bash
-pnpm add -D @repo/eslint-config
-```
-
 ## 사용법
 
 ### Base 설정

@@ -6,12 +6,6 @@
 
 이 패키지는 일관된 디자인 시스템을 위한 공통 Tailwind CSS 설정을 제공합니다. 커스텀 색상, 폰트, 간격 등의 디자인 토큰이 포함되어 있습니다.
 
-## 설치
-
-```bash
-pnpm add -D @repo/tailwind-config
-```
-
 ## 사용법
 
 ### tailwind.config.js에서 설정

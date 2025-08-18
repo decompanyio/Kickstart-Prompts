@@ -6,12 +6,6 @@
 
 이 패키지는 다양한 프로젝트 타입에 맞는 TypeScript 설정을 제공합니다. React 애플리케이션, Next.js, Vite, 라이브러리 개발 등 각각의 환경에 최적화된 설정이 포함되어 있습니다.
 
-## 설치
-
-```bash
-pnpm add -D @repo/typescript-config
-```
-
 ## 사용법
 
 ### Base 설정

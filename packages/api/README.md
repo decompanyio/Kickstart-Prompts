@@ -6,12 +6,6 @@
 
 이 패키지는 프로젝트 전반에서 사용되는 API 클라이언트 설정을 제공합니다. Supabase와 Axios 설정이 포함되어 있습니다.
 
-## 설치
-
-```bash
-pnpm add @repo/api
-```
-
 ## 사용법
 
 ### Supabase 클라이언트

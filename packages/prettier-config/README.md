@@ -6,12 +6,6 @@
 
 이 패키지는 일관된 코드 포맷팅을 위한 공통 Prettier 설정을 제공합니다. 모든 프로젝트에서 동일한 코드 스타일을 유지할 수 있습니다.
 
-## 설치
-
-```bash
-pnpm add -D @repo/prettier-config
-```
-
 ## 사용법
 
 ### package.json에서 설정
