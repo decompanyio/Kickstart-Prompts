@@ -3,11 +3,7 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@/*": ["app/*"],
-      "@components/*": ["app/components/*"],
-      "@assets/*": ["app/assets/*"],
-      "@utils/*": ["app/utils/*"],
-      "@types/*": ["app/types/*"]
+      "@app/*": ["app/*"]
     }
   },
   "include": ["app/**/*", "index.html", "vite.config.ts"],

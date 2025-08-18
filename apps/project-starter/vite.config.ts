@@ -7,11 +7,12 @@ export default defineConfig({
   plugins: [react()],
   resolve: {
     alias: {
+      '@app': path.resolve(__dirname, './app'),
       '@repo/assets': path.resolve(__dirname, '../../packages/assets'),
       '@repo/tailwind-config': path.resolve(
         __dirname,
         '../../packages/tailwind-config'
-      ),
-    },
-  },
+      )
+    }
+  }
 })

@@ -1,23 +1,14 @@
-import PromptCard from './PromptCard'
+import PromptCard from '@app/components/PromptCard'
 
-export interface Prompt {
-  id: string
-  title: string
-  description?: string
-  prompt: string
-  category?: string
-}
+import type { PromptType } from '@app/api/type.ts'
 
 type PromptListProps = {
-  prompts: Prompt[]
-  className?: string
+  prompts: PromptType[]
 }
 
-const PromptList = ({ prompts, className }: PromptListProps) => {
+const PromptList = ({ prompts }: PromptListProps) => {
   return (
-    <div
-      className={`grid gap-6 md:grid-cols-2 xl:grid-cols-3 ${className || ''}`}
-    >
+    <div className={`grid gap-6 md:grid-cols-2 xl:grid-cols-3`}>
       {prompts.map((prompt) => (
         <PromptCard
           key={prompt.id}

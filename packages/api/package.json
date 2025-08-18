@@ -1,0 +1,31 @@
+{
+  "name": "@repo/api",
+  "version": "0.0.0",
+  "type": "module",
+  "exports": {
+    ".": "./index.ts",
+    "./supabase": "./supabase/config.ts",
+    "./axios": "./axios/config.ts"
+  },
+  "scripts": {
+    "build": "tsc",
+    "lint": "eslint . --max-warnings 0",
+    "lint:fix": "eslint . --fix",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "check-types": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@repo/eslint-config": "workspace:*",
+    "@repo/prettier-config": "workspace:*",
+    "@repo/typescript-config": "workspace:*",
+    "@types/node": "^22.17.1",
+    "eslint": "^9.33.0",
+    "prettier": "^3.6.2",
+    "typescript": "5.8.3"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.55.0",
+    "axios": "^1.11.0"
+  }
+}

@@ -1,4 +1,6 @@
 export { Button } from './button'
 export { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from './card'
 export { Code } from './code'
+export { Error, ErrorMessage, ErrorNotFound, ErrorNetwork } from './error'
+export { Loading, LoadingDots, LoadingBars, LoadingSkeleton } from './loading'
 export { cn } from './lib/utils'

@@ -1,8 +1,11 @@
-import * as React from 'react'
+import { useState, useEffect } from 'react'
 import { Search } from 'lucide-react'
+
 import { Button } from '@repo/ui/button'
 
-interface SearchAndFilterProps {
+import { useDebounce } from '@app/hooks/useServiceHooks.ts'
+
+type SearchAndFilterProps = {
   searchTerm: string
   onSearchChange: (term: string) => void
   selectedCategory: string
@@ -15,23 +18,32 @@ const SearchAndFilter = ({
   onSearchChange,
   selectedCategory,
   onCategoryChange,
-  categories,
+  categories
 }: SearchAndFilterProps) => {
+  const [localSearchTerm, setLocalSearchTerm] = useState(searchTerm)
+  const debouncedSearchTerm = useDebounce(localSearchTerm, 300) // 300ms 디바운스
+
+  useEffect(() => {
+    onSearchChange(debouncedSearchTerm)
+  }, [debouncedSearchTerm, onSearchChange])
+
+  useEffect(() => {
+    setLocalSearchTerm(searchTerm)
+  }, [searchTerm])
+
   return (
     <div className="space-y-4 mb-8">
-      {/* 검색바 */}
       <div className="relative">
         <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground" />
         <input
           type="text"
           placeholder="프롬프트 검색..."
-          value={searchTerm}
-          onChange={(e) => onSearchChange(e.target.value)}
+          value={localSearchTerm}
+          onChange={(e) => setLocalSearchTerm(e.target.value)}
           className="w-full pl-10 pr-4 py-3 border border-input bg-background rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-ring"
         />
       </div>
 
-      {/* 카테고리 필터 */}
       <div className="flex flex-wrap gap-2">
         <Button
           variant={selectedCategory === '' ? 'default' : 'outline'}
